@@ -11,7 +11,14 @@ def text_to_speech(text, lang='id'):
     return buf
 
 def main():
+    st.set_page_config("Text To Speech")
     st.title("Aplikasi Text-To-Speech")
+    st.write("""
+    Aplikasi ini memungkinkan Anda untuk mengubah teks menjadi suara.
+    Cukup masukkan teks yang ingin diubah, pilih bahasa yang diinginkan, dan klik tombol untuk menghasilkan audio.
+    Anda dapat memilih antara bahasa Inggris dan Indonesia untuk konversi teks ke suara.
+    """)
+
     text = st.text_area("Masukkan teks yang ingin diubah menjadi suara:")
 
     language = st.selectbox("Pilih bahasa:", ["english", "indonesia"])
